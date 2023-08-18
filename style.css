@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo', sans-serif;
+}
+
+.game-container {
+    width: 500px;
+    height: 730px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    background-color: rgb(34, 255, 0);
+}
+
+.sky {
+    background-color: rgb(48, 122, 160);
+    width: 500px;
+    height: 580px;
+    position: absolute;
+}
+
+.ground {
+    background: url('./images/ground.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 580px;
+    /* z-index: +1; */
+}
+
+.gr-bottom {
+    z-index: 3;
+}
+
+.gr-top {
+    top: 575px;
+    z-index: 1;
+}
+
+
+.bird {
+    /* background-color: yellow; */
+    background-image: url('./images/bird.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+
+.obstacle {
+    background-image: url('./images/pipe.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 60px;
+    height: 300px;
+    z-index: 2;
+}
+
+.top-obstacle {
+    background-image: url('./images/pipe.png');
+    background-position: center;
+    background-size: cover;
+    transform: rotate(180deg);
+    position: absolute;
+    width: 60px;
+    height: 300px;
+    z-index: 1;
+}
+
+
+
+
+.count-numb {
+    font-weight: 900;
+    font-size: 2.125rem;
+    color: rgb(255, 255, 255);
+}
+
+.start-cont,
+.playagain-cont {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    padding: 3rem 2rem;
+    border-radius: 0.4rem;
+    margin: auto;
+    z-index: 1000;
+    background-color: rgba(45, 14, 75, 0.8);
+    color: rgb(216, 208, 208);
+    text-align: center;
+}
+
+.playagain-cont {
+    display: none;
+}
+
+.start-btn,
+.playagain-btn {
+    background: none;
+    border: none;
+    background-color: rgba(102, 51, 153, 0.8);
+    padding: 0.5rem 2rem;
+    border-radius: 0.4rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 2.125rem;
+    color: wheat;
+    cursor: pointer;
+    transition: 0.25s;
+    font-family: inherit;
+}
+
+.start-btn:hover {
+    background-color: whitesmoke;
+    color: rgba(102, 51, 153, 1);
+}
+
+
+
+
+.ground-moving {
+
+    background-repeat: repeat-x;
+    animation: slideright 100s infinite linear;
+    -webkit-animation: slideright 300s infinite linear;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+
+    to {
+        background-position: 0%;
+    }
+}
+
+@-webkit-keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+
+    to {
+        background-position: 0%;
+    }
+}
